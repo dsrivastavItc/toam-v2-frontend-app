@@ -8,7 +8,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/messages');
+        const res = await axios.get('https://toam-v2-backend-app.onrender.com/messages');
         setMessages(res.data);
       } catch (err) {
         console.error(err);

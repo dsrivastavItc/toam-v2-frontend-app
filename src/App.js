@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Messages from './components/Messages';
-import SendMessageForm from './components/SendMessageForm';
+import Messages from './components/Messages.js';
+import SendMessageForm from './components/SendMessageForm.js';
 import './App.css'; // Import the CSS file
 function App() {
   return (
