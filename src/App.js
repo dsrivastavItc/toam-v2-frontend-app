@@ -1,15 +1,37 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ComplaintsPage from './Pages/ComplaintsPage';
+import MessagesPage from './Pages/MessagesPage'
 import logo from './logo.svg';
 import './App.css';
-import Messages from './components/Messages.js';
-import SendMessageForm from './components/SendMessageForm.js';
-import './App.css'; // Import the CSS file
+
 function App() {
   return (
-    <div className="App">
+<Router>
+      <div className='App'>
       <div className='App-header'>TOAM V2</div>
-       <SendMessageForm />
-      <Messages />
-    </div>
+        {/* Navigation Links */}
+        <nav>
+          <ul>
+            <li><Link to="/complaints">Complaints</Link></li>
+            <li><Link to="/messages">Messages</Link></li>
+          </ul>
+        </nav>
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/complaints" element={<ComplaintsPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+        </Routes>
+      </div>
+      
+    </Router>
+
+    // <div className="App">
+    //   <div className='App-header'>TOAM V2</div>
+    //    <SendMessageForm />
+    //   <Messages />
+    // </div>
   );
 }
 
