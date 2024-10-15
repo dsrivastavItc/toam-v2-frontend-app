@@ -43,6 +43,7 @@ const ComplaintTable = ({ data }) => {
     return data.map(complaint => ({
       TradeDirection: complaint.TradeDirection,
       Description: complaint.Description,
+      Summary: complaint.Summary,
       Date: processDate(complaint.Date),
       IsRecurringProblem: complaint.IsRecurringProblem,
       LocationName: complaint.LocationName,
@@ -117,6 +118,7 @@ const ComplaintTable = ({ data }) => {
             <h2>Complaint Details</h2>
             <p><strong>Trade Direction:</strong> {selectedComplaint.TradeDirection}</p>
             <p><strong>Description:</strong> {selectedComplaint.Description}</p>
+            <p><strong>Summary:</strong> {selectedComplaint.Summary}</p>
             <p><strong>Date:</strong> {selectedComplaint.Date}</p>
             <p><strong>Is Recurring Problem:</strong> {selectedComplaint.IsRecurringProblem}</p>
             <p><strong>Location Name:</strong> {selectedComplaint.LocationName}</p>
