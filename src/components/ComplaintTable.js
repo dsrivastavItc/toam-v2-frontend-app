@@ -51,10 +51,12 @@ const ComplaintTable = ({ data }) => {
       TradeRegulationType: complaint.TradeRegulationType,
       Status: complaint.Status,
       SubmitDate: new Date(complaint.SubmitDate).toLocaleString(),
-      LocationCountryCode: complaint.LocationCountryCode,
-      TradeOriginCountryCode: complaint.TradeOriginCountryCode,
-      TradeDestinationCountryCode: complaint.TradeDestinationCountryCode,
+      LocationCountry: complaint.LocationCountry,
+      TradeOriginCountry: complaint.TradeOriginCountry,
+      TradeDestinationCountry: complaint.TradeDestinationCountry,
+      ObstacleType: complaint.ObstacleType,
       Remarks: complaint.Remarks,
+      SubmitUserId: complaint.SubmitUserId
     }));
   }, [data]);
 
@@ -126,9 +128,10 @@ const ComplaintTable = ({ data }) => {
             <p><strong>Trade Regulation Type:</strong> {selectedComplaint.TradeRegulationType}</p>
             <p><strong>Status:</strong> {selectedComplaint.Status}</p>
             <p><strong>Submit Date:</strong> {selectedComplaint.SubmitDate}</p>
-            <p><strong>Location Country Code:</strong> {selectedComplaint.LocationCountryCode}</p>
-            <p><strong>Trade Origin Country Code:</strong> {selectedComplaint.TradeOriginCountryCode}</p>
-            <p><strong>Trade Destination Country Code:</strong> {selectedComplaint.TradeDestinationCountryCode}</p>
+            <p><strong>Location Country :</strong> {selectedComplaint.LocationCountry}</p>
+            <p><strong>Trade Origin Country :</strong> {selectedComplaint.TradeOriginCountry}</p>
+            <p><strong>Trade Destination Country :</strong> {selectedComplaint.TradeDestinationCountry}</p>
+            <p><strong>Obstacle Type</strong> {selectedComplaint.ObstacleType}</p>
             <p><strong>Remarks:</strong> {selectedComplaint.Remarks}</p>
             <button onClick={closeModal}>Close</button>
           </div>
